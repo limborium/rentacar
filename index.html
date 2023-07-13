@@ -8,32 +8,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Car Rental</title>
+  <link rel="icon" href="./images/RentalLogo.png">
+  <title>Rent with Rentall</title>
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <div class="nav-logo">
-                <div class="logo-shape">
-                    <p class="logo-text">T</p>
+        <inner-column>
+            <nav class="nav">
+                <a class="header-logo" href="#">
+                    <div class="logocon">
+                        <div class="nav-logo">
+                            <img src="./images/RentalLogo.png" alt>
+                        </div>
+                        <h2>Rentall</h2>
+                    </div>
+                </a>
+                <ul class="nav-list"> 
+                    <li>
+                        <a class="home-link" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="about-link" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="cars-link" href="#">Cars</a>
+                    </li>
+                    <li>
+                        <a class="testimonials-link" href="#">Testimonials</a>
+                    </li>
+                    <li>
+                        <a class="contat-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="log button">Sign In</button>
+                    <button class="reg button fill">Register</button>
                 </div>
-                <h2>Tokocar</h2>
-            </div>
-            <div class="nav-list"> 
-                <a class="nav" href="#">Home</a>
-                <a class="nav" href="#">About</a>
-                <a class="nav" href="#">Cars</a>
-                <a class="nav" href="#">Testimonials</a>
-                <a class="nav" href="#">Contact</a>
-            </div>
-            <div class="nav-buttons">
-                <button class="log button">Sign In</button>
-                <button class="reg button">Register</button>
-            </div>
-        </nav>
+            </nav>
+        </inner-column>
     </header>
+
     <main>
+        <section class="hero">
+            <inner-column>
+
+                <graphic-diptych>
+                    <text-content>
+                        <h1>Save <span>big</span> on your perfect car</h1>
+
+                        <p>Our mission is to provide you with the best of the best cars to support all of your needs</p>
+                        
+                        <div class="lower-third">
+                            <button class="order button fill" href="#">Order Now</button>
+                            <button class="learn-more button fill" href="#">Learn More</button>
+                        </div>
+                    </text-content>
+
+                    <picture>
+                        <img src="http://fpoimg.com/300x300?text=Hanselman" alt>
+                    </picture>
+                </graphic-diptych>
+
+            </inner-column>
+        </section>
+
+        <!-- <section class="search">
+            <inner-column>
+
+                <search-tab>
+                    <text-content>
+                        <h3>Buying a car? It's really easy with us</h3>
+                        <p>Test drive: <a class="phone-link" href="tel:123-456-7890">+123 456 7890</a></p>
+                    </text-content>
+
+                    <search-bar>
+                        <div class="search product">
+                            <p>Search product</p>
+                        </div>
+                        <div class="search year">
+                            <p>Year made</p>
+                        </div>
+                        <div class="search model">
+                            <p>Model</p>
+                        </div>
+                    </search-bar>
+                </search-tab>
+
+            </inner-column>
+        </section> -->
     </main>
+
     <footer>
     </footer>
     <script src="script.js" defer></script>
