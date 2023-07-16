@@ -27,6 +27,7 @@ img {
     dispay: block;
     width: 100%;
     height: auto;
+    margin-bottom: -5px;
 }
 
 a {
@@ -54,7 +55,7 @@ html, body {
 }
 
 body {
-    display; flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -87,15 +88,25 @@ button {
     padding: 10px 0;
 }
 
-button:active {
-    animation: press 0.5s 1 linear;
+button:hover {
+    box-shadow: 0px 10px 17px -10px var(--black);
+    transform: scale(1.03);
 }
+
+button:active {
+    box-shadow: 0 10px 10px -10px var(--black);
+    transform: scale(0.98);
+}
+
+/* button:active {
+    animation: press 0.5s 1 linear;
+} */
 
 .reg, .fill {
     color: var(--white);
     background-color: var(--red);
     border-radius: 8px;
-    box-shadow: 0 0 20px -10px var(--grey) inset;
+    box-shadow: 0 10px 15px -10px var(--black);
     transition: 0.4s;
 }
 
@@ -108,12 +119,21 @@ button:active {
 
 .log {
     color: var(--dark);
-    background-color: var(--white);
+    background-color: transparent;
     width: 80px;
 }
 
-.log:hover {
+#log:hover {
     color: var(--red);
+    background-color: transparent;
+    box-shadow: none;
+    transform: scale(1);
+}
+
+#log:active {
+    color: var(--red);
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .nav-list li a {
@@ -132,11 +152,11 @@ button:active {
     transition: 0s;
 }
 
-.learn-more {
+.learn-more, .product-search {
     background: var(--dark);
 }
 
-.learn-more:hover {
+.learn-more:hover, .product-search:hover {
     color: var(--dark);
     background: var(--white);
     border: 2px solid var(--dark);
@@ -148,11 +168,30 @@ button:active {
     transition: color 0.3s;
 }
 
+select {
+    color: var(--dark);
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    width: 175px;
+    height: 29px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+
+
     /* ----- ANIMATIONS ----- */
     @keyframes press {
         0% {
           transform: scale(1);
-          transform: box-shadow: 0 5px 10px var(--grey);
+          transform: box-shadow(0 5px 10px var(--grey));
         }
         50% {
           transform: scale(0.92);
@@ -215,7 +254,7 @@ text-content p {
     color: var(--grey);
 }
 
-text-content .button {
+text-content .button, search-bar .button {
     font-weight: 600;
     width: 180px;
     height: 55px;
@@ -225,6 +264,10 @@ text-content .button {
 search-tab p {
     color: var(--dark);
     font-weight: 600;
+}
+
+select {
+    color: var(--red);
 }
 
 /* ------ MODULES ------ */
@@ -286,6 +329,7 @@ graphic-diptych div {
 search-tab {
     display: flex;
     flex-direction: column;
+    padding: 75px 0;
 }
 
 search-tab text-content {
@@ -294,11 +338,59 @@ search-tab text-content {
     align-items: center;
 }
 
+search-tab h3 {
+    font-size: 48px;
+    width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+search-tab p {
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
 search-bar {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    margin: 0px 0;
+    height: 160px;
+    box-shadow: 0 15px 50px -30px var(--grey);
+    border-radius: 10px;
+    gap: 140px;
 }
 
+item-row {
+    display: flex;
+    flex-grow: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* ----- RESPONSIVE ----- */
@@ -313,13 +405,6 @@ search-bar {
         flex-basis: 50%;
     }
 }
-
-
-
-
-
-
-
 
 
 

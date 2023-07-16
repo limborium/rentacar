@@ -11,6 +11,7 @@
   <link rel="icon" href="./images/RentalLogo.png">
   <title>Rent with Rentall</title>
 </head>
+<script src="script.js" defer></script>
 <body>
     <header>
         <inner-column>
@@ -41,7 +42,7 @@
                     </li>
                 </ul>
                 <div class="nav-buttons">
-                    <button class="log button">Sign In</button>
+                    <button class="log button" id="log">Sign In</button>
                     <button class="reg button fill">Register</button>
                 </div>
             </nav>
@@ -72,7 +73,7 @@
             </inner-column>
         </section>
 
-        <!-- <section class="search">
+        <section class="search">
             <inner-column>
 
                 <search-tab>
@@ -81,25 +82,39 @@
                         <p>Test drive: <a class="phone-link" href="tel:123-456-7890">+123 456 7890</a></p>
                     </text-content>
 
-                    <search-bar>
-                        <div class="search product">
-                            <p>Search product</p>
-                        </div>
-                        <div class="search year">
-                            <p>Year made</p>
-                        </div>
-                        <div class="search model">
-                            <p>Model</p>
-                        </div>
+                    <search-bar class="container">
+                        <item-row>
+                            <form name="searchform" id="searchform" action="/action_page.php">
+                                <div class="form-row">
+                                    <label for="make">Make</label>
+                                    <select name="make" id="make">
+                                        <option value="" disabled selected>Search make</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <label for="model">Model</label>
+                                    <select name="model" id="model">
+                                        <option value="" selected>Search model</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
+                                    <label for="year">Year</label>
+                                    <select name="year" id="year">
+                                        <option value="" selected>Select year</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </item-row>
+                        
+                        <button class="product-search button fill" type="submit" value="">Search</button>
                     </search-bar>
                 </search-tab>
 
             </inner-column>
-        </section> -->
+        </section>
     </main>
 
     <footer>
     </footer>
-    <script src="script.js" defer></script>
 </body>
 </html>
