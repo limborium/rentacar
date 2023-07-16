@@ -270,6 +270,31 @@ select {
     color: var(--red);
 }
 
+.stat-info h2 {
+    font-size: 48px;
+}
+
+.stat-info p:not(div *) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 33px;
+}
+
+.stat-info .int {
+    font-size: 48px;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.stat-info .title {
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.new-cars, .used-cars, .buyers, .int {
+    text-align: center;
+}
+
 /* ------ MODULES ------ */
 nav {
     display: flex;
@@ -296,11 +321,11 @@ nav .logocon{
     gap: 15px;
 }
 
-graphic-diptych {
+graphic-diptych, info-diptych {
     display: block;
 }
 
-graphic-diptych text-content {
+graphic-diptych text-content, info-diptych text-content{
     display: block;
 }
 
@@ -318,7 +343,7 @@ graphic-diptych p:not(div p){
     margin-bottom: 40px;
 }
 
-graphic-diptych div {
+graphic-diptych .lower-third {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -392,16 +417,37 @@ form div {
     flex-direction: column;
 }
 
+info-diptych h2,
+info-diptych p:not(div p){
+    margin-bottom: 40px;
+}
+
+info-diptych .stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.new-cars, .used-cars, .buyers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90px;
+}
+
 
 /* ----- RESPONSIVE ----- */
 @media (min-width: 700px) {
-    graphic-diptych {
+    graphic-diptych, info-diptych {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 150px;
     }
-    graphic-diptych :is(text-content, picture) {
+    graphic-diptych :is(text-content, picture),
+    info-diptych :is(text-content, picture) {
         flex-basis: 50%;
     }
 }
